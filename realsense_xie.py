@@ -62,7 +62,7 @@ try:
             depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(
                 depth_image, alpha=0.03), cv2.COLORMAP_JET)
 
-            # Stack both images horizontally
+            # 水平堆叠两幅图片
             images = np.hstack((color_image, depth_colormap))
 
             # Show images
@@ -76,7 +76,7 @@ try:
             n = 0
             print('排序前：')
             print(camera_xyz_list)
-            import numpy as np
+            
             np.savetxt(str(n) + ".csv", camera_xyz_list, delimiter=",")
             camera_xyz_list.sort(reverse=False)
             # print('排序后：')
